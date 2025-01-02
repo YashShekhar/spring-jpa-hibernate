@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-jpa-hibernate
+  h2:
+    console:
+      enabled: true
+  datasource:
+    generate-unique-name: false
+    name: lms
+  jpa:
+    show-sql: true
