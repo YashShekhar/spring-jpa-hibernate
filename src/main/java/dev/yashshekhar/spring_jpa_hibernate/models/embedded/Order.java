@@ -1,5 +1,6 @@
 package dev.yashshekhar.spring_jpa_hibernate.models.embedded;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -22,4 +23,7 @@ public class Order implements Serializable {
     private String orderInfo;
 
     private String anotherField;
+
+    @Embedded
+    private Address address;
 }
