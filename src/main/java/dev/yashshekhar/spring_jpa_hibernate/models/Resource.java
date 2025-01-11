@@ -1,6 +1,5 @@
 package dev.yashshekhar.spring_jpa_hibernate.models;
 
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

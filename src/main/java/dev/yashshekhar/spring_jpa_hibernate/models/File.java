@@ -1,6 +1,5 @@
 package dev.yashshekhar.spring_jpa_hibernate.models;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
