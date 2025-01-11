@@ -1,5 +1,6 @@
 package dev.yashshekhar.spring_jpa_hibernate;
 
+import dev.yashshekhar.spring_jpa_hibernate.models.Author;
 import dev.yashshekhar.spring_jpa_hibernate.models.Video;
 import dev.yashshekhar.spring_jpa_hibernate.repository.AuthorRepository;
 import dev.yashshekhar.spring_jpa_hibernate.repository.VideoRepository;
@@ -21,11 +22,16 @@ public class Application {
 			VideoRepository videoRepository
 	) {
 		return args -> {
-			var video = Video.builder()
-					.name("abc")
-					.length(5)
+			var author = Author.builder()
+					.first_name("Yash")
+					.last_name("Shekhar")
+					.email("yash.shekhar@email.com")
+					.age(50)
 					.build();
-			videoRepository.save(video);
+			authorRepository.save(author);
+			// Calling named query
+			authorRepository.findByNamedQuery(45).forEach(System.out::println);
+
 		};
 	}
 
